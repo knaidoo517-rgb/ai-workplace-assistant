@@ -23,7 +23,7 @@ async function runPrompt(system: string, prompt: string) {
 
 function splitEmail(raw: string) {
   const match = raw.match(/^\s*subject\s*:\s*(.+)$/im);
-  const subject = match ? match[1].trim() : "";
+  const subject = match?.[1]?.trim() ?? "";
   const body = match ? raw.replace(match[0], "").trim() : raw.trim();
   return { subject: subject || "Follow up", body };
 }
