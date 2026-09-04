@@ -26,7 +26,7 @@ export const Route = createFileRoute("/chatbot")({
       },
     ],
   }),
-  component: Chatbot;
+  component: Chatbot,
 });
 
 type Message = { role: "user" | "assistant"; content: string };
